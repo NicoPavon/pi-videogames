@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     id: {
-      type: Datatypes.UUID,
+      type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
@@ -30,7 +30,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
     },
     platforms: {
-      type: Datatypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
     createdVideogame: {
