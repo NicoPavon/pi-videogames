@@ -1,15 +1,15 @@
-const axios = require("axios");
+const axios = require('axios');
 const { Videogame, Genres} = require("../db");
-const API_KEY = process.env
+const {API_KEY} = process.env
 
 
 // ruta del get api ----------
 
 const getApiInfo = async() =>{
     const videogames = [];
-    const apiUrl = `https://api.rawg.io/api/games?key=${API_KEY}`;
+    let url = `https://api.rawg.io/api/games?key=${API_KEY}`;
     for (let i = 1; i < 8; i++) {
-        let gamesPages = await axios.get(apiUrl);
+        let gamesPages = await axios.get(url);
          gamesPages.data?.results.forEach((e) => {
            videogames.push({
            id: e.id,
@@ -21,7 +21,7 @@ const getApiInfo = async() =>{
            platforms: e.platforms.map((platform) => platform.platform.name),
            });
         });
-        apiUrl = gamesPages.data.next;
+        url = gamesPages.data.next;
     };
     return videogames;
 }
@@ -38,7 +38,7 @@ const getDbInfo = async() => {
             }
         }
     });
-    const dbGames = dbData.map((e) => {
+    let dbGames = dbData.map((e) => {
     return {
         id: e.id,
         name: e.name,
