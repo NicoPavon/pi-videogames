@@ -5,11 +5,11 @@ const {getOneGame, getAllGames, getDbInfo} = require('./requires');
 // ruta del get ------
 
 const getVideogame = async (req,res) => {
-    console.log(1)
+    //console.log(1)
 try {
-    console.log(2)
+    //console.log(2)
     const {name} = req.query;
-    console.log(3)
+    //console.log(3)
     const videogames = await getAllGames();
     if(name) {
         let videogame = await videogames.filter(e=>e.name.toLowerCase().includes(name.toLowerCase()))
@@ -21,7 +21,7 @@ try {
         /*si no hay por query, que muestre todos*/
         res.status(200).send(videogames) 
     }
-    console.log(4)
+    //console.log(4)
     }
 catch(error) {
     res.status(400).send({errorMsg: error})
@@ -90,6 +90,52 @@ catch(error) {
 
 // ruta del put ------
 
+const putGame = async (req, res) => {
+try{
+    const {id} = req.params;
+    const gameupdId = await Videogame.findOne({
+        where: {
+            id: id,
+        }
+    });
+    await gameupdId.update({
+        name: req.body.name,
+        rating: req.body.rating,
+        released: req.body.released,
+        description: req.body.description,
+        platforms: req.body.platforms,
+    });
+    req.body.genres.forEach(async(e) => {
+        let genreDb = await Genres.findAll({
+            where: {
+                name: e,
+            }
+        });
+        await gameupdId.setGenres(genreDb)
+    });
+    res.status(200).send(gameupdId);
+}
+catch(error) {
+    res.status(400).send({errorMsg: error})
+}
+};
+
+// ruta del delete ------
+
+const deleteGame = async(req, res) => {
+try{
+    const {id} = req.params; /*encuentra el id que coresponde*/
+    const deletedGame = await Videogame.findByPk(id);
+    if(deletedGame) {
+        await deletedGame.destroy(); /*aca se borra*/
+        return res.send("videogame deleted!")
+    }
+    res.status(400).send("videogame not found");
+}
+catch(error){
+    res.status(400).send({errorMsg: error})
+}
+}
 
 
 
@@ -97,4 +143,6 @@ module.exports= {
     getVideogame,
     getGameById,
     postVideogame,
+    putGame,
+    deleteGame,
 };
