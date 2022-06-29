@@ -1,11 +1,13 @@
 import {React, useState, useEffect} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
-import { getVideoGames, getGenres } from '../../actions';
+import { getVideoGames, getGenres, orderByAlphabet, orderByRating, filterGamesByGenres, filterDBGames } from '../../actions';
+import NavBar from '../NavBar/NavBar';
 
-const Home = () =>{
+const Home = () => {
     const [Order, setOrder] = useState("")
     const [loader, setLoader] = useState(false);
     const dispatch = useDispatch();
+
 /*paginas*/
     const [currentPage, setCurrentPage] = useState(1);
     const [gamesPerPage, setGamesPerPage] = useState(15);
@@ -16,28 +18,144 @@ const Home = () =>{
 
     const pageHandler = (page) =>{
         setCurrentPage(page);
-    }
+    };
     const setPageOne = () => {
         setCurrentPage(1)
-    }
+    };
+
     /*next y prev*/
     const nextPage = () =>{
         if(currentPage < Math.ceil(gamescopy.length/gamesPerPage)){
             setCurrentPage(currentPage + 1);
         }
-    }
+    };
     const prevPage = () => {
         if(currentPage -1 !== 0){
             setCurrentPage(currentPage - 1);
         }
-    }
-
+    };
+    
     useEffect(() =>{
         dispatch(getVideoGames());
         dispatch(getGenres());
     }, [dispatch]);
 
+    const HandleReload = () => {
+        window.location.reload();
+    };
 
+    const HandleFilterByGenres=(e)=>{
+        e.preventDefault();
+        dispatch(filterGamesByGenres(e.target.value));
+        setCurrentPage(1);
+        setOrder(e.target.value);
+    };
 
+    const HandleOrderName=(e)=>{
+        e.preventDefault();
+        dispatch(orderByAlphabet(e.target.value));
+        setCurrentPage(1);
+        setOrder(e.target.value);
+    };
 
+    const HandleOrderRating=(e)=>{
+        e.preventDefault();
+        dispatch(orderByRating(e.target.value));
+        setCurrentPage(1);
+        setOrder(e.target.value);
+    };
+    const HandleFilterDB= (e)=>{
+        e.preventDefault();
+        dispatch(filterDBGames(e.target.value));
+        setCurrentPage(1);
+    };
+    
+
+    // lo que retorna
+return (
+    <div>
+         <div onChange={()=>{setPageOne()}}><NavBar/></div>
+            <div className='container'>
+            {/* titulo */}
+                <div>
+                    <h1>RetroGames</h1>
+                </div>
+            
+            {/* orden alfabetico */}
+        <select className="select" onChange={(e)=>{HandleOrderName(e)}} >
+          <optgroup className="optionGroup" label="Alphabetic">
+                <option className="option" value="A-Z">from A to Z</option>
+                <option className="option" value="Z-A">from Z to A</option>
+          </optgroup>  
+        </select>
+           
+            {/* filtrar por genero */}
+        <select  onChange={(e) => {HandleFilterByGenres(e)}}>
+            <option  hidden>
+              Genres
+            </option>
+            {genres.map((el) => {
+              return (
+                <option key={genres.indexOf(el)} className="option" value={el.name}>
+                {el.name}
+                </option>
+              );
+            })}
+        </select> 
+            
+            {/* ordena por rating */}
+        <select onChange={(e)=>{HandleOrderRating(e)}}>
+            <option hidden>Rating</option>
+            <option value='Max-Min'>Max - Min</option>
+            <option value='Min-Max'>Min - Max</option>
+        </select>
+           
+            {/* filtra la db */}
+        <select onChange={e=>{HandleFilterDB(e)}}>
+                    <option value='All'>All</option>
+                    <option value='DB'>Games Added</option>
+                    <option value='API'>Created</option>
+                </select>
+        </div>  
+
+            {/* reinicia */}
+        <button className='Refresh' onClick={HandleReload}>
+                    Refresh
+                </button>
+            
+            {/* cards */}
+        <div>
+            <div className='container'>
+                {currentGame.length > 0 && !loader ? (
+                    currentGame.map((e) => {
+                    return (
+                    <CardGame
+                    key={currentGame.indexOf(e)}
+                    id={e.id}
+                    name={e.name}
+                    background_image={e.background_image}
+                    genres={e.genres}
+                    rating={e.rating}/>
+                    )})
+                    ) : (<div className='container-load'>
+                    <div className="loading"></div>
+                    </div>)} 
+            </div>
+        </div>
+                
+            {/* paginas */}
+        <div className='Pag-div'>
+            <button onClick= {prevPage} >prev</button>
+                <Pagination 
+                gamesPerPage={gamesPerPage}
+                gamesTotal={gamescopy.length}
+                onSetPage={pageHandler}
+                />
+            <button onClick={nextPage} >next</button>
+        </div>
+    </div>
+
+  )
 }
+
+export default Home;
