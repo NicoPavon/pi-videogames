@@ -2,15 +2,17 @@ import {React, useState, useEffect} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import { getVideoGames, getGenres, orderByAlphabet, orderByRating, filterGamesByGenres, filterDBGames } from '../../actions';
 import NavBar from '../NavBar/NavBar';
+import Pagination from '../Pagination/Pagination';
+import CardGame from '../CardGame/CardGame';
 
 const Home = () => {
-    const [Order, setOrder] = useState("")
-    const [loader, setLoader] = useState(false);
+    const [/*Order*/, setOrder] = useState("")
+    const [loader, /*setLoader*/] = useState(false);
     const dispatch = useDispatch();
 
 /*paginas*/
     const [currentPage, setCurrentPage] = useState(1);
-    const [gamesPerPage, setGamesPerPage] = useState(15);
+    const [gamesPerPage, /*setGamesPerPage*/] = useState(15);
     const lastGameIndex = currentPage * gamesPerPage;
     const firstGameIndex= lastGameIndex - gamesPerPage;
     const { gamescopy, genres} = useSelector((store) => store);
@@ -120,8 +122,8 @@ return (
 
             {/* reinicia */}
         <button className='Refresh' onClick={HandleReload}>
-                    Refresh
-                </button>
+                Refresh
+        </button>
             
             {/* cards */}
         <div>
