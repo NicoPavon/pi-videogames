@@ -1,0 +1,16 @@
+body{
+    background-image: url(http://l3apq3bncl82o596k2d1ydn1-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/newretroarcade-vive-multiplayer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
+    width: 100vmax;
+    height: 100vh;
+    position: absolute;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 75px;
+    gap: 100px
+}
