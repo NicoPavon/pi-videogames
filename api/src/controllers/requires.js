@@ -72,7 +72,7 @@ const getOneGame = async(id) =>{
         name: game.data.name,
         rating: game.data.rating,
         released: game.released,
-        background_image: game.data.backround_image,
+        background_image: game.data.background_image,
         genres: game.data.genres.map(g => g.name),
         platforms: game.data.parent_platforms.map(p => p.platform.name),
         description: game.data.description,

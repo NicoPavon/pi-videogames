@@ -51,6 +51,15 @@ const Details = () => {
                 <p><strong>Platforms : </strong>{game[0].platforms?.join(', ')}</p>
                 <p><strong>Description : </strong></p>
                 <p dangerouslySetInnerHTML={{ __html: game[0].description }}/>
+
+                <div className='return-home'>
+                    <Link to='/Home'>
+                        <button className='btn-return'>
+                            <strong>back to Home</strong>
+                        </button>
+                    </Link>
+                </div>
+
             </div>
           </div>
       ) : (
@@ -67,6 +76,15 @@ const Details = () => {
                 <p><strong>Platforms : </strong>{game.platforms?.join(', ')}</p>
                 <p><strong>Description : </strong></p>
                 <p dangerouslySetInnerHTML={{ __html: game.description }}/>
+
+                <div className='return-home'>
+                    <Link to='/Home'>
+                        <button className='btn-return'>
+                            <strong>back to Home</strong>
+                        </button>
+                    </Link>
+                </div>
+
                 </div>
       )
     };

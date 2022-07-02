@@ -1,3 +1,4 @@
+import './SearchBar.css'
 import { useState} from 'react';
 import { useDispatch} from 'react-redux';
 import { getGameByName} from '../../actions/index';
@@ -20,14 +21,14 @@ const SearchBar = ({onSearch}) => {
 
     //   lo que retorna
     return (
-        <div className='search-box'>
+        <div class="input-group">
           
-          <input className='input-search'
+          <input className='input'
            value={name}
            type="text" placeholder='Type to Search...'
            onChange ={(e) =>handleInput(e)}/>
       
-          <button type ='submit' className='btn-search'
+          <button type ='submit' class="button--submit"
           onClick={(e) => handleSubmit(e)} >Search</button>
       
         </div>

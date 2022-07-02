@@ -80,16 +80,16 @@ return(
         <div>
             <div onChange={()=>{setPageOne()}}><NavBar/></div>
          <div className='filters-container'>
-           <div>
-           <h1>Video Games APP</h1>
+           <div className='title'>
+           <h1>The Gamer Guide</h1>
            </div>
                 <button className='Refresh' onClick={HandleReload}>
                     Refresh
                 </button>
           <select className="select" onChange={(e)=>{HandleOrderName(e)}} >
-          <optgroup className="optionGroup" label="Alphabetic">
-                    <option className="option" value="A-Z">A - Z</option>
-                    <option className="option" value="Z-A">Z - A</option>
+          <optgroup className="optionGroup">
+                    <option className="option" value="A-Z">from A to Z</option>
+                    <option className="option" value="Z-A">from Z to A</option>
             </optgroup>  
           </select>
              <select  onChange={(e) => {HandleFilterByGenres(e)}}>
@@ -112,17 +112,17 @@ return(
                 <select onChange={e=>{HandleFilterDB(e)}}>
                     <option value='All'>All</option>
                     <option value='DB'>Games Added</option>
-                    <option value='API'>Existent</option>
+                    <option value='API'>Created</option>
                 </select>
                 </div>   
             <div className='Pag-div'>
-                <button onClick={prevPage}>PREV</button>
+                <button onClick={prevPage}>prev</button>
                 <Pagination 
                 gamesPerPage={gamesPerPage}
                 gamesTotal={gamescopy.length}
                 onSetPage={pageHandler}
                 />
-                <button onClick={nextPage}>NEXT</button>
+                <button onClick={nextPage}>next</button>
             </div>
             <div>
                 <div className='container'>

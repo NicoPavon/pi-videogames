@@ -1,0 +1,63 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c778fc;
+    opacity: 70%;
+  }
+  
+  li{
+    float: left;
+  }
+  
+  li a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 24px 18px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgba(17, 17, 17, 0.726);
+  }
+  
+  .active {
+    background-color: rgba(17, 17, 17, 0.726);
+    color: white;
+  }
+  .Searchbar{
+    display: flex;
+    padding-left: 280px;
+    float: center;
+  }
+  .About{
+    display: block;
+    float: right;
+    padding-right: 15px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .Intro{
+    display: flex;
+    font-size: 18px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .Home{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .NewGame{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px 8px 8px 8px;
+  }

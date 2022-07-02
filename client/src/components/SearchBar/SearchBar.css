@@ -1,0 +1,42 @@
+.input-group {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .input {
+    min-height: 35px;
+    max-width: 300px;
+    padding: .5rem 1rem;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 8px 8px 8px 8px;
+    background-color: transparent;
+  }
+  
+  .button--submit {
+    min-height: 50px;
+    margin-left: 10px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #5e4dcd;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .button--submit:hover {
+    background-color: #5e5dcd;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #ffffff;
+    outline: none;
+  }
+  

@@ -1,5 +1,5 @@
 body{
-    background-image: url(http://l3apq3bncl82o596k2d1ydn1-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/newretroarcade-vive-multiplayer.jpg);
+    background-image: url(https://www.nvidia.com/content/dam/en-zz/Solutions/gtcf21/retroverse-contest/nvidia-ov-retro-floriane-tiam-1280x680.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -12,5 +12,59 @@ body{
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 75px;
-    gap: 100px
+    gap: 100px;
+    font-family: 'Press Start 2P', cursive;
 }
+
+.title{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    color:  rgba(255, 255, 255, 0.733);
+    font-size: 30px;
+}
+
+.Pag-div{
+    display: flex;
+    justify-content: center;
+  }
+  .container-filters{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  
+  .container-load{
+    margin-left: 500px;
+    margin-right: 500px;
+  }
+  .loading {
+    display: block-inline;
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  .loading:after {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+    content: " ";
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loading 1.2s linear infinite;
+    text-align: center;
+  }
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
