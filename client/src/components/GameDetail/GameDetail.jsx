@@ -36,12 +36,7 @@ const Details = () => {
             <div>
               <NavBar/>
             </div>
-            <div>
-                <button onClick={handleDelete}>delete</button>
-                <Link to={`/updategame/${id}`}>
-                    <button onClick={handleUpdate}>update</button>
-                </Link>
-            </div>
+
             <div className='container-'> 
                 <img className='bck-img' src={game[0].background_image} width='430px' height='220px' alt={game.name} />
                 <div><h1 className='title'>{game[0].name}</h1></div>
@@ -53,14 +48,28 @@ const Details = () => {
                 <p><strong>Description : </strong></p>
                 <p dangerouslySetInnerHTML={{ __html: game[0].description }}/>
             </div>
+            <div>
+                <button className='btn-class' onClick={handleDelete}>delete</button>
+                <Link to={`/updategame/${id}`}>
+                    <button className='btn-class' onClick={handleUpdate}>update</button>
+                </Link>
+            </div>
+
+            <Link to='/Home'>
+            <button className='btn-class'>
+                <strong>Home</strong>
+            </button>
+            </Link>
           </div>
+        
+          
       ) : (
         <div className='container-'> 
           <div>
             <NavBar/>
           </div>
                 <img className='bck-img' src={game.background_image} width='430px' height='220px' alt={game.name} />
-                <div><h1 className='title'>{game.name}</h1></div>
+            <div><h1 className='title'>{game.name}</h1></div>
                 <p ><strong className='id-'>ID : </strong>{game.id}</p>
                 <p><strong>Genres : </strong>{game.genres?.join(', ')}</p>
                 <p><strong>Rating : </strong>{game.rating}</p>
@@ -68,8 +77,17 @@ const Details = () => {
                 <p><strong>Platforms : </strong>{game.platforms?.join(', ')}</p>
                 <p><strong>Description : </strong></p>
                 <p dangerouslySetInnerHTML={{ __html: game.description }}/>
+
+            <Link to='/Home'>
+                <button className='btn-class'>
+                    <strong>Home</strong>
+                </button>
+            </Link>
             </div>
+            
+            
       )
+      
     };
     
     export default Details

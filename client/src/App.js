@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 import GameDetail from './components/GameDetail/GameDetail';
 import Page404 from './components/error404/error404';
 import NewGame from './components/NewGame/NewGame';
-import About from './components/About/About';
+import About from './components/About/About.jsx';
 
 
 

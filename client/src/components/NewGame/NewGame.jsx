@@ -113,7 +113,7 @@ export default function GameCreate(){
 
 return(
     <div className="Backgroundd">
-        <Link to='/home'><button>Back</button></Link> 
+        <Link to='/home'><button className="btn-class">Back</button></Link> 
         <div className="container-all">
         {id ? (
             <div>
@@ -134,6 +134,7 @@ return(
                 <label>Name:</label>
                 <input
                 type= 'text'
+                className="select"
                 value={input.name}
                 name= 'name'
                 onChange={(e)=>handleChange(e)}
@@ -148,6 +149,7 @@ return(
                 min="1"
                 placeholder="Game Rate"
                 name="rating"
+                className="select"
                 value={input.rating}
                 onChange={(e)=>handleChange(e)}/>
             </div>
@@ -158,6 +160,7 @@ return(
                 type='date'
                 value={input.released}
                 name='released'
+                className="select"
                 onChange={(e)=>handleChange(e)}/>
             </div>
             
@@ -167,6 +170,7 @@ return(
                 type='text'
                 value={input.background_image}
                 name='background_image'
+                className="select"
                 onChange={(e)=>handleChange(e)}/>
             </div>
             
@@ -187,7 +191,7 @@ return(
                 </div>
             </div>
                     <label className="plat">Platforms: </label>
-                <div className="div-platforms" >
+                <div className="div-platforms">
                     <input value="PS4" type="checkbox" name="platform" onChange={(e)=>handlePlatforms(e)}/><label>PS4</label>
                     <input value="PS5" type="checkbox" name="platform" onChange={(e)=>handlePlatforms(e)}/><label>PS5</label>
                     <input value="PC" type="checkbox" name="platform" onChange={(e)=>handlePlatforms(e)}/><label>PC</label>
@@ -212,12 +216,13 @@ return(
                 type='text'
                 value={input.description}
                 name='description'
+                className="select"
                 cols='40'
                 rows='6'
                 onChange={(e)=>handleChange(e)}/>  
                 </div>
             </div>
-                <button  type='submit' className='button'>Create Game</button>
+                <button  type='submit' className='btn-class'>Create Game</button>
         </form>
     
             </div>

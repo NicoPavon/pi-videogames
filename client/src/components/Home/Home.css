@@ -56,6 +56,20 @@ body{
   text-decoration: none;
   border: 1px solid rgb(0, 0, 0);
 }
+
+.select{
+ 
+    min-height: 38px;
+    max-width: 190px;
+    padding: .5rem 1rem;
+    color: rgba(255, 255, 255, 0.733);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #c778fc;
+    opacity: 60%;
+}
 .container-load{
     margin-left: 500px;
     margin-right: 500px;

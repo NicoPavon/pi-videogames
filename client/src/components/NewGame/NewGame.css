@@ -17,11 +17,18 @@
     }
     
     .div-title{
-        
-        color: white;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.733);
+    border-radius: 8px 8px 8px 8px;
+    
     }
     .div-name{
         color: white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     
     .div-genres{
@@ -32,31 +39,70 @@
     .div-platforms{
         color: white;
         display: grid;
-        grid-template-columns: repeat(6, auto);
+        grid-template-columns: repeat(6, 1fr);
     }
     .div-rating{
         color: white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     .div-description{
         color: white;
-    }
-    .div-platforms{
-        color: white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     .gen{
         color: white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     .plat{
         color: white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     .div-released{
         color: white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     .div-img{
         color:white;
+        font-size: small;
+        font-family: 'Press Start 2P', cursive;
     }
     .validator{
         color: white;
         font-size: 19px;
         font-family: 'Courier New', Courier, monospace;
     }
+
+    .btn-class {
+        display: inline-block;
+        
+      } 
+      .btn-class {
+        background-color: gainsboro;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 12%;
+        cursor: pointer;
+        color: black;
+        float: center;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid rgb(0, 0, 0);
+        
+      }
+
+      .select{
+        min-height: 18px;
+        max-width: 180px;
+        padding: .4rem 1rem;
+        color: rgba(255, 255, 255, 0.733);
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+        border: 1px solid #5e4dcd;
+        border-radius: 8px 8px 8px 8px;
+        background-color: #c778fc;
+        opacity: 60%;
+      }

@@ -90,14 +90,12 @@ return(
                 </button>
           <select className="select" onChange={(e)=>{HandleOrderName(e)}} >
           <optgroup className="optionGroup" label="Alphabetic">
-                    <option className="option" value="A-Z">from A to Z</option>
-                    <option className="option" value="Z-A">from Z to A</option>
+                    <option className="option" value="A-Z">A to Z</option>
+                    <option className="option" value="Z-A">Z to A</option>
             </optgroup>  
           </select>
-             <select  onChange={(e) => {HandleFilterByGenres(e)}}>
-            <option  hidden>
-              Genres
-            </option>
+             <select className="select" onChange={(e) => {HandleFilterByGenres(e)}}>
+            <option hidden>Genres</option>
             {genres.map((el) => {
               return (
                 <option key={genres.indexOf(el)} className="option" value={el.name}>
@@ -106,15 +104,15 @@ return(
               );
             })}
           </select> 
-                <select onChange={(e)=>{HandleOrderRating(e)}}>
+                <select className="select"  onChange={(e)=>{HandleOrderRating(e)}}>
                     <option hidden>Rating</option>
                     <option value='Max-Min'>Max - Min</option>
                     <option value='Min-Max'>Min - Max</option>
                 </select>
-                <select onChange={e=>{HandleFilterDB(e)}}>
+                <select className="select" onChange={e=>{HandleFilterDB(e)}}>
                     <option value='All'>All</option>
                     <option value='DB'>Games Added</option>
-                    <option value='API'>Created</option>
+                    <option value='API'>Already created</option>
                 </select>
                 </div> 
             </div>
