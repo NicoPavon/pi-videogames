@@ -83,7 +83,9 @@ return(
            <div className='title'>
             <h1>The Gamer's Guide</h1>
            </div>
-                <button className='Refresh' onClick={HandleReload}>
+
+           <div className='lista'>
+                <button className='btn-class' onClick={HandleReload}>
                     Refresh
                 </button>
           <select className="select" onChange={(e)=>{HandleOrderName(e)}} >
@@ -114,15 +116,16 @@ return(
                     <option value='DB'>Games Added</option>
                     <option value='API'>Created</option>
                 </select>
-                </div>   
+                </div> 
+            </div>
             <div className='Pag-div'>
-                <button onClick={prevPage}>prev</button>
+                <button className='btn-class' onClick={prevPage}>prev</button>
                 <Pagination 
                 gamesPerPage={gamesPerPage}
                 gamesTotal={gamescopy.length}
                 onSetPage={pageHandler}
                 />
-                <button onClick={nextPage}>next</button>
+                <button className='btn-class' onClick={nextPage}>next</button>
             </div>
             <div>
                 <div className='container'>

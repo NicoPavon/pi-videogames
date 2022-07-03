@@ -36,6 +36,26 @@ body{
     text-align: center;
   }
   
+.lista{
+  display: flex;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.btn-class {
+  display: inline-block;
+} 
+.btn-class {
+  background-color: gainsboro;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 12%;
+  cursor: pointer;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid rgb(0, 0, 0);
+}
 .container-load{
     margin-left: 500px;
     margin-right: 500px;
