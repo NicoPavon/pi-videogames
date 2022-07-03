@@ -7,7 +7,7 @@ export default function LandingPage() {
         <div className="background">
 
             <div className="welcomebox">
-                <h1 className='welcome'>Welcome to the Gamer Guide!</h1>
+                <h1 className='welcome'>Welcome to the Gamer's Guide!</h1>
             </div>
             <div className='boton'>
                 <Link to= '/Home'>

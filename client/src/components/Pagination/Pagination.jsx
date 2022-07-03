@@ -1,3 +1,4 @@
+import './Pagination.css'
 import React from 'react';
 import { Fragment } from 'react';
 

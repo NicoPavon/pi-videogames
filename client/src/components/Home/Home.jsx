@@ -81,13 +81,13 @@ return(
             <div onChange={()=>{setPageOne()}}><NavBar/></div>
          <div className='filters-container'>
            <div className='title'>
-           <h1>The Gamer Guide</h1>
+            <h1>The Gamer's Guide</h1>
            </div>
                 <button className='Refresh' onClick={HandleReload}>
                     Refresh
                 </button>
           <select className="select" onChange={(e)=>{HandleOrderName(e)}} >
-          <optgroup className="optionGroup">
+          <optgroup className="optionGroup" label="Alphabetic">
                     <option className="option" value="A-Z">from A to Z</option>
                     <option className="option" value="Z-A">from Z to A</option>
             </optgroup>  

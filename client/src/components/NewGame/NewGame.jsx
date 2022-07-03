@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import { createGame, getGenres, updateGame, getGameById} from '../../actions';
 import { useDispatch, useSelector} from 'react-redux';
+import './NewGame.css'
 
 
 export default function GameCreate(){
