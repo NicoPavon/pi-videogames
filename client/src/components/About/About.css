@@ -1,0 +1,45 @@
+.btn-class {
+    display: inline-block;
+} 
+  .btn-class {
+    background-color: gainsboro;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 12%;
+    cursor: pointer;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.titulo-detail{
+    display: flex;
+    justify-content: center;
+    padding-top: 325px;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.733);
+    border-radius: 8px 8px 8px 8px;
+}
+
+.titulo-rating{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.733);
+    border-radius: 8px 8px 8px 8px;
+}
+
+.img-center{
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    padding-right: 15px;
+}

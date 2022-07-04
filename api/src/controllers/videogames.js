@@ -103,6 +103,7 @@ try{
         rating: req.body.rating,
         released: req.body.released,
         description: req.body.description,
+        background_image: req.body.background_image,
         platforms: req.body.platforms,
     });
     req.body.genres.forEach(async(e) => {
@@ -116,26 +117,25 @@ try{
     res.status(200).send(gameupdId);
 }
 catch(error) {
-    res.status(400).send({errorMsg: error})
+    console.log(error)
 }
 };
 
 // ruta del delete ------
 
-const deleteGame = async(req, res) => {
-try{
-    const {id} = req.params; /*encuentra el id que coresponde*/
-    const deletedGame = await Videogame.findByPk(id);
-    if(deletedGame) {
-        await deletedGame.destroy(); /*aca se borra*/
-        return res.send("videogame deleted!")
+const deleteGame = async (req,res) => {
+    try {
+        const { id } = req.params; /*encuentra el id que corresponde*/
+        const gamedelete= await Videogame.findByPk(id);
+        if(gamedelete){
+            await gamedelete.destroy(); /*lo borra*/
+            return res.status(200).send('Video Game was delete')
+        }
+        res.status(400).send('Video Game not found');
+    } catch(error) {
+        console.log(error)
     }
-    res.status(400).send("videogame not found");
-}
-catch(error){
-    res.status(400).send({errorMsg: error})
-}
-}
+};
 
 
 

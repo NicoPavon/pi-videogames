@@ -1,5 +1,5 @@
 .container-404{
-    background-image: url(https://www.bypeople.com/wp-content/uploads/2016/03/mario-404-page.jpg);
+    background-image: url(https://c.tenor.com/DNrNoBnfz4cAAAAC/game-over.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
@@ -7,42 +7,37 @@
     width: 100vmax;
     height: 100vh;
     position: absolute;
-    }
-    
-    .img-404{
-        background-repeat: no-repeat;
-        opacity: 50%;
-       background-size: cover;
-       background-position: fixed;
-       background-attachment: fixed;
-       width: 100vmax;
-       height: 100vh;
-       position: absolute;
-    }
-    .container-btn-404{
-        display: block;
-        text-align: center;
-        margin-top: 14%;
-    }
-      .btn-class {
-        background-color: gainsboro;
-        font-family: 'Press Start 2P', cursive;
-        border-radius: 12%;
-        cursor: pointer;
-        color: black;
-        float: none;
-        padding: 8px 16px;
-        text-decoration: none;
-        border: 1px solid rgb(0, 0, 0);
-        
-      }
-    .write-404{
-        font-family: 'Press Start 2P', cursive;
-        display: block;
-        text-align: center;
-        margin-top: 282px;
-        justify-content: center;
-        color: #FFFFFF;
-        font-size: 30px;
-    
-    }
+  }
+   
+.btn-class1 {
+    display: inline-block;
+
+} 
+.btn-class1 {
+background-color: gainsboro;
+font-family: 'Press Start 2P', cursive;
+border-radius: 12%;
+cursor: pointer;
+color: black;
+float: center;
+padding: 8px 16px;
+text-decoration: none;
+border: 1px solid rgb(0, 0, 0);
+
+}
+.write-404{
+    font-family: 'Press Start 2P', cursive;
+    display: block;
+    text-align: center;
+    margin-top: 272px;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 30px;
+
+}
+
+.centrando{
+  display: flex;
+  justify-content: center;
+  padding-top: 230px;
+}

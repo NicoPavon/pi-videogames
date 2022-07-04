@@ -6,12 +6,12 @@
   }
   
   .input {
-    min-height: 38px;
+    min-height: 30px;
     max-width: 300px;
     padding: .5rem 1rem;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
-    font-size: 15px;
+    font-size: 14px;
     border: 1px solid #5e4dcd;
     border-radius: 8px 8px 8px 8px;
     background-color: transparent;

@@ -59,24 +59,32 @@ export function createGame(payload){
 // modificar -----
 
 export const updateGame = (id, data) => {
-    return async function(dispatch) {
-        await axios.put(`http://localhost:3001/videogames/${id}`, data);
-        return dispatch({
-            type: 'UPDATE_GAME',
-        })
+    return async function(dispatch){
+        try{
+            await axios.put(`http://localhost:3001/videogames/${id}`, data);
+            return dispatch({
+                type: 'UPDATE_GAME'
+            })
+        }catch(error){
+            console.log(error);
+        }
     }
-};
+  }
 
 // borrar ------
 
 export const deleteGame = (id) => {
-    return async function (dispatch){
-        await axios.delete(`http://localhost:3001/videogames/${id}`);
-        return dispatch({
-            type: 'DELETE_GAME',
-        })
+    return async function(dispatch){
+        try{
+            await axios.delete(`http://localhost:3001/videogames/${id}`)
+            return dispatch({
+                type: 'DELETE_GAME',
+            })
+        }catch(error){
+           console.log(error)
+        }
     }
-};
+  }
 
 // ordenamientos y filtrados
 

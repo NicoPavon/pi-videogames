@@ -5,15 +5,16 @@ import './error404.css';
 const Page404 = () =>{
     return(
         <div className='container-404'>
-        <div><p className='write-404'>, PRESS THE HOME BUTTON!</p></div>
-        <div className='container-btn-404'>
-           <Link to='/Home'>
-            <button className='btn-class'>
-                <strong>Home</strong>
-            </button>
-            </Link>
+            <div>
+                <p className='write-404'>Error 404! Press the Home button!</p>
+            </div>
+            
+            <div className='centrando'>
+                <Link to='/Home'>
+            <button className='btn-class1'>Home</button>
+                </Link>
+            </div>
         </div>
-    </div>
     )
 }
 

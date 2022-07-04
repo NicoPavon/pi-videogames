@@ -81,28 +81,28 @@
         display: inline-block;
         
       } 
-      .btn-class {
-        background-color: gainsboro;
-        font-family: 'Press Start 2P', cursive;
-        border-radius: 12%;
-        cursor: pointer;
-        color: black;
-        float: center;
-        padding: 8px 16px;
-        text-decoration: none;
-        border: 1px solid rgb(0, 0, 0);
-        
-      }
+    .btn-class {
+    background-color: gainsboro;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 12%;
+    cursor: pointer;
+    color: black;
+    float: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    
+    }
 
-      .select{
-        min-height: 18px;
-        max-width: 180px;
-        padding: .4rem 1rem;
-        color: rgba(255, 255, 255, 0.733);
-        font-family: 'Press Start 2P', cursive;
-        font-size: 12px;
-        border: 1px solid #5e4dcd;
-        border-radius: 8px 8px 8px 8px;
-        background-color: #c778fc;
-        opacity: 60%;
-      }
+    .select{
+    min-height: 18px;
+    max-width: 180px;
+    padding: .4rem 1rem;
+    color: rgba(255, 255, 255, 0.733);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    border: 1px solid #5e4dcd;
+    border-radius: 8px 8px 8px 8px;
+    background-color: #c778fc;
+    opacity: 60%;
+    }
