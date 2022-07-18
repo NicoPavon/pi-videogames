@@ -23,8 +23,12 @@ module.exports = (sequelize) => {
       allowNull: true,
     },
     rating: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.INTEGER,
       allowNull: true,
+      validate: {
+        min: 0,
+        max: 5,
+      }
     },
     background_image: {
       type: DataTypes.STRING,

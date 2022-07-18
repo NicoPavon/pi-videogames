@@ -147,7 +147,7 @@ return(
                 type="number"
                 max="5"
                 min="1"
-                placeholder="Game Rate"
+                placeholder="R"
                 name="rating"
                 className="select"
                 value={input.rating}
